@@ -123,11 +123,40 @@
         padding: 0.9rem 0;
       }
 
+      .brand-group {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+      }
+
       .brand {
         font-weight: 800;
         font-size: 1rem;
         letter-spacing: 0.02em;
         color: var(--text);
+      }
+
+      .resume-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.42rem 0.78rem;
+        border-radius: 999px;
+        background: var(--blue-soft);
+        color: var(--blue);
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition: color 0.2s ease, background-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .resume-link:hover,
+      .resume-link:focus-visible {
+        background: #dce8f4;
+        color: #5d7d9f;
+        transform: scale(1.02);
+        outline: none;
       }
 
       .nav-links {
@@ -1711,6 +1740,10 @@
           flex-direction: column;
         }
 
+        .brand-group {
+          width: 100%;
+        }
+
         .nav-links {
           width: 100%;
           justify-content: flex-start;
@@ -1820,7 +1853,18 @@
   <body>
     <header class="topbar">
       <div class="container topbar-inner">
-        <a class="brand" href="#about">Anshul Kamble</a>
+        <div class="brand-group">
+          <a class="brand" href="#about">Anshul Kamble</a>
+          <a
+            class="resume-link"
+            href="assets/AnshulKamble_ResumeSW.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+            Resume
+          </a>
+        </div>
         <nav aria-label="Primary" class="nav-links">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
